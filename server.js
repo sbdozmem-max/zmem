@@ -10,7 +10,7 @@ app.post('/users', async (req, res) => {
     const { name, age } = req.body;
 
     try {
-        await fetch("https://bacet.app.n8n.cloud/webhook-test/zmeeem", {
+        await fetch("https://bacet.app.n8n.cloud/webhook/zmeeem", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -37,3 +37,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log("Server running on port " + PORT);
 });
+
