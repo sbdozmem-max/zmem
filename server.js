@@ -10,7 +10,7 @@ app.post('/users', async (req, res) => {
     const { name, age } = req.body;
 
     try {
-        await axios.post("https://bacet.app.n8n.cloud/webhook-test/zmeeem", {
+        await axios.post(https://bacet.app.n8n.cloud/webhook-test/zmeeem, {
             name,
             age
         });
@@ -25,4 +25,5 @@ app.post('/users', async (req, res) => {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log("Server running on port " + PORT);
+
 });
