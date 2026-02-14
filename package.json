@@ -1,12 +1,10 @@
 {
   "name": "my-api-project",
-  "axios": "^1.6.0"
   "version": "1.0.0",
-  "description": "Simple API with frontend",
+  "description": "API with n8n integration",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
-	
   },
   "dependencies": {
     "express": "^4.18.2"
