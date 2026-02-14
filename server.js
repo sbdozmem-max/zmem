@@ -2,7 +2,7 @@ app.post('/users', async (req, res) => {
     const { name, age } = req.body;
 
     try {
-        await fetch(https://bacet.app.n8n.cloud/webhook-test/zmeeem, {
+        await fetch("https://bacet.app.n8n.cloud/webhook-test/zmeeem", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -20,4 +20,5 @@ app.post('/users', async (req, res) => {
         res.status(500).json({ message: "فشل الإرسال إلى n8n ❌" });
     }
 });
+
 
