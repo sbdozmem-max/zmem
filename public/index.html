@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>إدخال البيانات</title>
+</head>
+<body style="text-align:center; margin-top:100px; font-family:Arial;">
+
+<h2>أدخل بياناتك</h2>
+
+<input type="text" id="name" placeholder="الاسم"><br><br>
+<input type="number" id="age" placeholder="العمر"><br><br>
+
+<button onclick="sendData()">إرسال</button>
+
+<p id="result"></p>
+
+<script>
+function sendData() {
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+
+    fetch("/users", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name, age })
+    })
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("result").innerText = data.message;
+    })
+    .catch(err => {
+        console.error(err);
+    });
+}
+</script>
+
+</body>
+</html>
